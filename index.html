@@ -1,5 +1,110 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN INFINITY</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
+</head>
 <body>
-<h1>SITE UNDER CONSTRUCTION... LET VISIT SOON!!</h1>
+
+<header>
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Brochure</a></li>
+            <li><a href="#">Layout</a></li>
+        </ul>
+    </nav>
+    <button class="button">Contact Us →</button>
+</header>
+
+
+<div class="about">
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="assets/overview.png" alt="Overview">
+        </div>
+        <div class="grid-item">
+            <img src="assets/projectlogo.png" alt="Project Logo">
+        </div>
+    </div>
+</div>
+
+<div class="photos">
+    <h3>WHAT IT LOOKS LIKE</h3>
+    <div class="images">
+        <img src="assets/VIEW_01.png" alt="Image" id="current-image">
+        <div class="buttons">
+            <button class="left-button" onclick="prevImage()">←</button>
+            <button class="right-button" onclick="nextImage()">→</button>
+        </div>
+    </div><br>
+    <button class="button">Download Brochure</button>
+</div>
+
+<div class="amenities">
+    <h4 style="color: #C5B525;text-align: center;"><i>"WHERE MODERNITY MEETS THE ECHOS OF VEDAS"</i></h4>
+    <div class="amenities-header">
+        <button id="vedicbutton" onclick="vedic()">Vedic</button>&nbsp;
+        <button id="modernbutton" style="background-color: black;" onclick="modern()">Modern</button>
+    </div>
+    <br>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img id="amenities-image-1" src="assets/vedic1.png">
+            <img id="amenities-image-2" src="assets/vedic2.png">
+        </div>
+        <div class="grid-item">
+            <img id="house" src="assets/vediccenter.png" alt="Project Logo">
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentImageIndex = 1;
+    const totalImages = 16;
+
+    function nextImage() {
+        currentImageIndex = (currentImageIndex % totalImages) + 1;
+        document.getElementById('current-image').src = `assets/VIEW_${currentImageIndex.toString().padStart(2, '0')}.png`;
+    }
+
+    function prevImage() {
+        currentImageIndex = (currentImageIndex - 2 + totalImages) % totalImages + 1;
+        document.getElementById('current-image').src = `assets/VIEW_${currentImageIndex.toString().padStart(2, '0')}.png`;
+    }
+
+    function modern(){
+        document.getElementById('amenities-image-1').src = `assets/modern1.png`;
+        document.getElementById('amenities-image-2').src = `assets/modern2.png`;
+        document.getElementById('house').src = `assets/clubhouse.png`
+        document.getElementById('vedicbutton').style.backgroundColor = `black`
+        document.getElementById('modernbutton').style.backgroundColor = `#C5B525`
+    }
+
+    function vedic(){
+        document.getElementById('amenities-image-1').src = `assets/vedic1.png`;
+        document.getElementById('amenities-image-2').src = `assets/vedic2.png`;
+        document.getElementById('house').src = `assets/vediccenter.png`
+        document.getElementById('vedicbutton').style.backgroundColor = `#C5B525`
+        document.getElementById('modernbutton').style.backgroundColor = `black`
+    }
+</script>
+
+<div class="location">
+    <div class="grid-container">
+        <div class="grid-item">
+            <h3> LOCATED NEAR NARPALA </h3>
+            <img src="assets/map.png" width="80%">
+        </div>
+        <div class="grid-item">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7222.3933135553225!2d77.78948920081889!3d14.757243477796244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb6ad0042e77ba9%3A0x56b4e88b600e4c8f!2sANANYA%20%26%20ANUTTHAMA!5e0!3m2!1sen!2sin!4v1712722842885!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
