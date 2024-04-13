@@ -71,6 +71,16 @@ nav ul li:last-child {
         order: -1;
     }
 
+    .project-overview .grid-item {
+        padding: 5% 5% 5% 5%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-overview .grid-item:nth-child(2) {
+        order: -1;
+    }
+
     .photos img {
         position: relative;
         display: inline-block;
@@ -123,6 +133,17 @@ nav ul li:last-child {
       box-sizing: border-box;
     }
 
+    .layout .grid-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .layout .grid-item {
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+    }
 }
 
 @media only screen and (min-width: 601px) {
@@ -133,6 +154,30 @@ nav ul li:last-child {
     }
 
     .about .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-overview .grid-container {
+        display: grid;
+        grid-gap: 20px;
+    }
+
+    .project-overview .grid-item {
+        padding: 5% 30% 5% 30%;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .layout .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .layout .grid-item {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -194,6 +239,10 @@ nav ul li:last-child {
 
 
 .about .grid-item img {
+    max-width: 100%;
+}
+
+.project-overview .grid-item img {
     max-width: 100%;
 }
 
@@ -266,6 +315,13 @@ nav ul li:last-child {
     transition: background-color 0.3s;
     border-radius: 7px;
 }
-  #contact-us  button[type="submit"]:hover {
+
+#contact-us  button[type="submit"]:hover {
     background-color: #00000;
-  }
+}
+
+
+  .layout .grid-item a {
+    text-decoration: none;
+    color: white;
+}

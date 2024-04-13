@@ -13,7 +13,7 @@
     <img src="assets/logo.png" alt="Logo" class="logo">
     <nav>
         <ul>
-            <li><a href="#">About</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="assets/brochure.pdf">Brochure</a></li>
             <li><a href="#">Layout</a></li>
         </ul>
@@ -32,6 +32,61 @@
         </div>
     </div>
 </div>
+
+<div id="about" class="project-overview">
+    <div class="grid-container">
+        <div class="grid-item">
+            <i>
+                <q id="projectText">This visionary project, named Ananya Anutthama and brought to life by Green Infinity, is a testament to the dedication and devotion of people with the right conscience. They have come together to create a divine community where spiritual seekers can live, pray, and thrive in harmony...</q>&nbsp;<u class="view-more-btn" id="viewMoreBtn" onclick="toggleText()" style="color: blue;">View More</u>
+            </i>
+            <p style="text-align: right;">
+                Yours Sincerely,<br>
+                Nutanapati Chitambar
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="layout" class="layout">
+    <h3 style="text-align: center;">AHUDA APPROVED</h3>
+    <div class="grid-container">
+        <div class="grid-item">
+            <button class="button"><a href="https://apdpms.ap.gov.in/UploadedFiles/Proposal/278/2023/DEC/ADCR_0194_2023/New//1107_0065_LP__2023.PDF">ANANYA LAYOUT</a></button>
+        </div>
+        <div class="grid-item">
+            <button class="button"><a href="https://apdpms.ap.gov.in/UploadedFiles/Proposal/278/2023/DEC/ADCR_0193_2023/New//1107_0061_LP_NRP_2023.PDF">ANUTTHAMA LAYOUT</a></button>
+        </div>
+        <div class="grid-item">
+            <button class="button"><a href="https://ahuda.org/wp-content/uploads/2024/04/FLPBPO1-2-1-1.pdf">ANANYA <br>FLP PROCEDDINGS</a></button>
+        </div>
+        <div class="grid-item">
+            <button class="button"><a href="https://ahuda.org/wp-content/uploads/2024/04/FLPBPO1-1-1.pdf">ANUTTHAMA <br>FLP PROCEDDINGS</a></button>
+        </div>
+    </div>
+    <br>
+</div>
+
+
+<script>
+    function toggleText() {
+        var variable = 1
+        var projectText = document.getElementById("projectText")
+        var viewMoreBtn = document.getElementById("viewMoreBtn");
+
+        if (viewMoreBtn.innerText == "View More") {
+            projectText.innerText = "This visionary project, named Ananya Anutthama and brought to life by Green Infinity, is a testament to the dedication and devotion of people with the right conscience. They have come together to create a divine community where spiritual seekers can live, pray, and thrive in harmony. It is a rare and remarkable endeavor born from minds committed to the ideals of actualization, spirituality, and cultural preservation, transcending mere profit-seeking. As one of the few spiritual communities of its kind, it stands as a beacon of enlightenment and communal unity. Profits from this noble venture directly support the Itihaas Educational and Spiritual Trust, benefiting initiatives such as an international Vedic school, orphanage, and senior living community. To the north, a blissful canal serenades the senses, while to the west, a sprawling 100-acre organic farm promises a harmonious connection with nature. Of particular significance is the inclusion of a Vedic school to the south of this layout, and a majestic 25-acre temple graces the southern horizon. This distinctive project represents a unique and blessed opportunity for us, Green Infinity developers, and devotees alike, made possible by the unwavering support of all who have contributed to its realization. We extend our heartfelt gratitude to all who have shared in this journey and invite continued support for our future endeavors."
+            viewMoreBtn.innerText = "View Less";
+            variable = 0
+        } else {
+            projectText.innerText = "This visionary project, named Ananya Anutthama and brought to life by Green Infinity, is a testament to the dedication and devotion of people with the right conscience. They have come together to create a divine community where spiritual seekers can live, pray, and thrive in harmony..."
+            viewMoreBtn.innerText = "View More";
+            variable = 1
+        }
+    }
+    function lessentext(){
+
+    }
+</script>
 
 <div class="photos">
     <h3>WHAT IT LOOKS LIKE</h3>
@@ -78,7 +133,10 @@
 
 <div id="contact-us">
     <h2>Contact Us</h2>
-    
+    <p style="color: white; font-size: smaller;">Phone Number: +91 90005 10909<br>
+    Email: greeninfinity33@gmail.com<br>
+    OR <br>
+    SEND US YOUR QUERY</p>
     <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
       <input type="hidden" name="access_key" value="176f0d35-0afd-4d0e-88d6-fd62fe6fd758">
       <div class="form-group">
@@ -104,7 +162,7 @@
 <script src="https://web3forms.com/client/script.js" async defer></script>
 <script>
         let currentImageIndex = 1;
-        const totalImages = 2;
+        const totalImages = 9;
     
         function nextImage() {
             currentImageIndex = (currentImageIndex % totalImages) + 1;
