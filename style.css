@@ -112,6 +112,16 @@ nav ul li:last-child {
     .amenities .grid-item img{
         max-width: 100%;
     }
+    #contact-us  input[type="text"],
+    input[type="tel"],
+    textarea {
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
 
 }
 
@@ -170,6 +180,16 @@ nav ul li:last-child {
         max-width: 100%;
         max-height: 100%;
     }
+    #contact-us  input[type="text"],
+    input[type="tel"],
+    textarea {
+      width: 25%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
 }
 
 
@@ -211,3 +231,41 @@ nav ul li:last-child {
     transition: background-color 0.3s;
     border-radius: 7px;
 }
+
+#contact-us {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #000000;
+    color: #C5B525;
+    font-family: 'Inria Serif';font-size: 22px;
+  }
+  
+#contact-us h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  #contact-us  .form-group {
+    margin-bottom: 20px;
+  }
+  #contact-us  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  #contact-us  textarea {
+    resize: vertical;
+  }
+  #contact-us button {
+    background-color: #C5B525;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 7px;
+}
+  #contact-us  button[type="submit"]:hover {
+    background-color: #00000;
+  }
