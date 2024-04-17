@@ -92,15 +92,9 @@
 </script>
 
 <div class="photos">
-    <h3>WHAT IT LOOKS LIKE</h3>
     <div class="images">
         <img src="assets/VIEW_01.png" alt="Image" id="current-image" >
-        <div class="buttons">
-            <button class="left-button" onclick="prevImage()">←</button>
-            <button class="right-button" onclick="nextImage()">→</button>
-        </div>
     </div><br>
-
 </div>
 
 <div class="amenities">
@@ -196,6 +190,8 @@
         function scrollToContact() {
             document.getElementById('contact-us').scrollIntoView({ behavior: 'smooth' });
         }
+
+        setInterval(nextImage, 3000);
     </script>
 </body>
 </html>
