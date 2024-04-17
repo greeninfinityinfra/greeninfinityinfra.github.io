@@ -248,11 +248,10 @@ nav ul li:last-child {
 
 .photos {
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #000000;
     color: #C5B525;
     font-family: 'Inria Serif';font-size: 22px;
+    width: 100%
+
 }
 
 .left-button,
@@ -317,7 +316,7 @@ nav ul li:last-child {
 }
 
 #contact-us  button[type="submit"]:hover {
-    background-color: #00000;
+    background-color: #000000;
 }
 
 
