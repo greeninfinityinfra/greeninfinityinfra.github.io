@@ -7,6 +7,60 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/projectlogo.png" sizes="16x16">
     <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
+    <style>
+        /* Styles for the popup */
+        #videoPopup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        #videoPopup iframe {
+            width: 80%;
+            height: 60%;
+        }
+        #closePopup {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    /* Styles for scrolling news */
+    #newsTicker {
+        height: 1cm;
+        width: 100%;
+        background: #ffcc00;
+        color: black;
+        padding: 10px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #newsTicker span {
+        display: inline-block;
+        white-space: nowrap;
+        will-change: transform;
+        animation: scrollNews 30s linear infinite;
+    }
+    @keyframes scrollNews {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+    </style>
 </head>
 <body>
 
@@ -14,15 +68,20 @@
     <img src="assets/logo.png" alt="Logo" class="logo">
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="assets/brochure.pdf">Brochure</a></li>
-            <li><a href="#layout">Layout</a></li>
+            <li><a href="#about"style="color:#426f48;"><b>About Us</b></a></li>
+            <li><a href="assets/brochure.pdf" style="color:#426f48;"><b>Brochure</b></a></li>
+            <li><a href="#layout" style="color:#426f48;"><b>Layout</b></a></li>
+            <li><a href="specialproject.html" style="color:#426f48;"><b>Added Colors</b></li>
         </ul>
     </nav>
     <button class="button" onclick="scrollToContact()">Contact Us →</button>
 </header>
 
-
+<div id="newsTicker">
+    <span>
+        NEWS: Sri Harihara Temple, a 50-acre temple complex with a 108 feet Vishnu statue and a 300 feet Shiva Linga with 1 Crore lingas etched into it, is announced | శ్రీ హరిహర ఆలయం, 50 ఎకరాల ఆలయ సముదాయం, 108 అడుగుల విష్ణు విగ్రహం మరియు 300 అడుగుల శివలింగంతో కూడి, 1 కోటి లింగాలు చెక్కబడిన శిల్పంతో ప్రకటించబడింది.
+    </span>
+</div>
 <div class="about">
     <div class="grid-container">
         <div class="grid-item">
@@ -64,7 +123,7 @@
             <button class="button"><a href="https://greeninfinityinfradevelopers.com/assets/ananyaflp.pdf">ANANYA <br>FLP PROCEDDINGS</a></button>
         </div>
         <div class="grid-item">
-            <button class="button"><a href="https://greeninfinityinfradevelopers.com/assets/anuttamaflp.pdf">ANUTTHAMA <br>FLP PROCEDDINGS</a></button>
+            <button class="button"><a href="https://greeninfinityinfradevelopers.com/assets/snutthama.pdf">ANUTTHAMA <br>FLP PROCEDDINGS</a></button>
         </div>
     </div>
     <br>
