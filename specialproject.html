@@ -1,0 +1,69 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Showcase</title>
+    <style>
+        h2{
+            text-decoration: none !important;
+            color: #C5B525;
+            border-bottom: none;
+        }
+        .main-video {
+            width: 100%;
+            max-width: 800px;
+        }
+        .video-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .video-list iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+        }
+        @media (max-width: 600px) {
+            .video-list iframe {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        img {
+            width: 400px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html#about"style="color:#426f48;"><b>About Us</b></a></li>
+                <li><a href="assets/brochure.pdf" style="color:#426f48;"><b>Brochure</b></a></li>
+                <li><a href="index.html#layout" style="color:#426f48;"><b>Layout</b></a></li>
+                <li><a href="specialproject.html" style="color:#426f48;"><b>Added Colors</b></li>
+            </ul>
+        </nav>
+        <button class="button" onclick="scrollToContact()">Contact Us →</button>
+    </header>
+    
+    <h2 style="text-align: center;">1200 Crores Hari-Hara Kshethram Beside Our Layout</h2>
+
+    <div class="video-list">
+    <video class="main-video" controls>
+        <source src="assets/specialproject.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </div>
+    <h2 style="text-align: center;">Recent News</h2>
+    <div class="video-list">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RoCzqsjmsX0?si=ZWP9tWP_EpiJfxgT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Xmlvg1NGKOA?si=0TZUwXO5LnwqWolu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
